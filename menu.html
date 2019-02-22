@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste of Italy</title>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Nunito+Sans:300,400,700,900" rel="stylesheet">
+   <link rel="stylesheet" href="styles.css">
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+<!---------------------------------------HTML--------------------------------------->
+
+
+
+<body>
+    <div id="popup">
+        <div id="luk"><button>X</button></div>
+        <div id="indhold"></div>
+    </div>
+
+
+
+    <header>
+
+        <nav class="menulinje">
+            <button class="forside">FORSIDE</button>
+            <button class="forside">MENU</button>
+            <button class="forside">INFORMATION</button>
+            <button class="forside">TAKEAWAY</button>
+        </nav>
+
+        <div class="logolinje">
+            <div class="firkant green"></div>
+            <div class="firkant white">
+                <div class="logo"></div>
+                <p class="underoverskrift">Frisk Pizza og Pasta</p>
+            </div>
+            <div class="firkant red"></div>
+        </div>
+
+        <nav class="menu">
+            <div>
+                <div class="kniv_gaffel"></div>
+            </div>
+            <button class="filter valgt" data-hold="alle">ALLE</button>
+            <button class="filter" data-hold="forretter">FORRET</button>
+            <button class="filter" data-hold="hovedretter">HOVEDRET</button>
+            <button class="filter" data-hold="desserter">DESSERT</button>
+            <button class="filter" data-hold="drikkevarer">DRIKKEEVARER</button>
+        </nav>
+
+    </header>
+    <h2>Forside</h2>
+
+
+    <section id=liste></section>
+
+    <footer>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <!--------------------------------------- JAVASCRIPT --------------------------------------->
+
+    <script>
+        let alleKategorier = [];
+        let filter = "alle";
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            let dest = document.querySelector("#liste");
+            let temp = document.querySelector("template");
+            async function getJson() {
+                let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1v5ehfDEUuHsFVWsQRh1FwfVxRXM6dfNxQsveqqnSEec");
+                alleKategorier = await jsonData.json();
+                //sorteree efter navn
+                alleKategorier.sort((a, b) => {
+                    return a.navn.localeCompare(b.navn);
+                })
+                visKategorier();
+            }
+
+            function visKategorier() {
+                dest.innerHTML = "";
+                alleKategorier.forEach(kategorier => {
+                    if (filter == "alle" || filter == kategorier.kategori) {
+                        let template = `
+                            <article class="kategorier">
+                            <h2>${kategorier.navn}</h2>
+                            <img src="imgs/${kategorier.billede}.jpg" alt="${kategorier.navn}">
+                                <br>
+                            <p>${kategorier.kort}</p><br>
+                            <p>Oprindelse: ${kategorier.oprindelse}</p>
+                                <br>
+                            <b>Pris: ${kategorier.pris},-</b>
+                        </article>
+                        `;
+                        dest.insertAdjacentHTML("beforeend", template);
+                        dest.lastElementChild.addEventListener("click", åben);
+
+                        function åben() {
+                            document.querySelector("#indhold").innerHTML = `
+                            <article class="popup">
+                            <h2>${kategorier.navn}</h2>
+                            <img src="imgs/${kategorier.billede}.jpg" alt="${kategorier.navn}">
+                                <br>
+                            <p>${kategorier.kort}</p><br>
+                            <p>Oprindelse: ${kategorier.oprindelse}</p>
+                                <br>
+                            <b>Pris: ${kategorier.pris},-</b>
+                        </article>
+                        `;
+                            document.querySelector("#popup").style.display = "block";
+                        }
+                    }
+                })
+            }
+            //function visKategorier slut
+            //            document.querySelectorAll(".filter").forEach(elm => {
+            //                elm.addEventListener("click", filtrering);
+            //
+            //            })
+            document.querySelector("#luk button").addEventListener("click", () => {
+                document.querySelector("#popup").style.display = "none";
+            })
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
+
+            function filtrering() {
+                filter = this.getAttribute("data-hold");
+                document.querySelector("h2").textContent = this.textContent;
+                document.querySelectorAll(".filter").forEach(elm => {
+                    elm.classList.remove("valgt");
+                })
+                this.classList.add("valgt");
+                console.log("filter", filter);
+                visKategorier();
+            }
+            getJson();
+        }
+    </script>
+</body>
+
+</html>
