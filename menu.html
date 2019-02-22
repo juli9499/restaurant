@@ -39,25 +39,24 @@
     <header>
 
         <nav class="menulinje">
-            <button class="forside">FORSIDE</button>
-            <button class="forside">MENU</button>
-            <button class="forside">INFORMATION</button>
-            <button class="forside">TAKEAWAY</button>
+           <a href="forside.html">FORSIDE</a>
+           <a href="menu.html">MENU</a>
+           <a href="forside.html#informationer">INFORMATION</a>
+           <a href="takeaway.html">TAKEAWAY</a>
         </nav>
 
         <div class="logolinje">
             <div class="firkant green"></div>
             <div class="firkant white">
                 <div class="logo"></div>
-                <p class="underoverskrift">Frisk Pizza og Pasta</p>
+<!--                <p class="underoverskrift">Frisk Pizza og Pasta</p>-->
             </div>
             <div class="firkant red"></div>
         </div>
 
         <nav class="menu">
-            <div>
+
                 <div class="kniv_gaffel"></div>
-            </div>
             <button class="filter valgt" data-hold="alle">ALLE</button>
             <button class="filter" data-hold="forretter">FORRET</button>
             <button class="filter" data-hold="hovedretter">HOVEDRET</button>
@@ -114,9 +113,7 @@
                             <img src="imgs/${kategorier.billede}.jpg" alt="${kategorier.navn}">
                                 <br>
                             <p>${kategorier.kort}</p><br>
-                            <p>Oprindelse: ${kategorier.oprindelse}</p>
-                                <br>
-                            <b>Pris: ${kategorier.pris},-</b>
+                            <p><b>Pris: ${kategorier.pris},-</b></p>
                         </article>
                         `;
                         dest.insertAdjacentHTML("beforeend", template);
@@ -129,9 +126,7 @@
                             <img src="imgs/${kategorier.billede}.jpg" alt="${kategorier.navn}">
                                 <br>
                             <p>${kategorier.kort}</p><br>
-                            <p>Oprindelse: ${kategorier.oprindelse}</p>
-                                <br>
-                            <b>Pris: ${kategorier.pris},-</b>
+                            <p><b>Pris: ${kategorier.pris},-</b></p>
                         </article>
                         `;
                             document.querySelector("#popup").style.display = "block";
@@ -155,9 +150,11 @@
                 filter = this.getAttribute("data-hold");
                 document.querySelector("h2").textContent = this.textContent;
                 document.querySelectorAll(".filter").forEach(elm => {
+                    console.log("classList",elm.classList);
                     elm.classList.remove("valgt");
                 })
                 this.classList.add("valgt");
+                console.log("Valgt", this.classList);
                 console.log("filter", filter);
                 visKategorier();
             }

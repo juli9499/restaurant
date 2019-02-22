@@ -7,6 +7,7 @@
     <title>Taste of Italy</title>
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Nunito+Sans:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
 
 
 
@@ -34,27 +35,43 @@
 
 
 
-    <header>
 
+
+    <header>
         <nav class="menulinje">
-            <button class="forside">FORSIDE</button>
-            <button class="forside">MENU</button>
-            <button class="forside">INFORMATION</button>
-            <button class="forside">TAKEAWAY</button>
+            <a href="forside.html">FORSIDE</a>
+            <a href="menu.html">MENU</a>
+            <a href="#informationer">INFORMATION</a>
+            <a href="takeaway.html">TAKEAWAY</a>
         </nav>
 
         <div class="logolinje">
             <div class="firkant green"></div>
             <div class="firkant white">
                 <div class="logo"></div>
-                <p class="underoverskrift">Frisk Pizza og Pasta</p>
+                <!--                <p class="underoverskrift">Frisk Pizza og Pasta</p>-->
             </div>
             <div class="firkant red"></div>
         </div>
-
     </header>
 
-    <div class="slideshow"></div>
+
+
+
+
+
+    <div class="slideshow">
+        <img class="slidepic" src="imgs/stemning/Kok-large.jpg" width="100%">
+        <img class="slidepic" src="imgs/stemning/Kok-pizza-large.jpg" width="100%">
+        <img class="slidepic" src="imgs/stemning/Pejs-large.jpg" width="100%">
+        <img class="slidepic" src="imgs/stemning/Stemning7-large.jpg" width="100%">
+        <img class="slidepic" src="imgs/stemning/selskaber-medium.jpg" width="100%">
+
+
+    </div>
+
+
+
 
     <div section="informationer">
         <div class="left">
@@ -102,6 +119,7 @@
     <!--------------------------------------- JAVASCRIPT --------------------------------------->
 
     <script>
+        w3.slideshow(".slidepic", 5000);
     </script>
 </body>
 
