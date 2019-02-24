@@ -523,6 +523,43 @@
          margin-right: 250px;
      }
 
+     #popup {
+         width: 500px;
+         height: auto;
+         padding-bottom: 30px;
+         top: 250px;
+         left: 130px;
+         position: fixed;
+         background-color: white;
+     }
+
+     #indhold {
+         box-sizing: border-box;
+         background-color: white;
+         width: 400px;
+         /*        padding: 10px;*/
+         height: auto;
+         margin: auto;
+         padding:
+     }
+
+     #luk {
+         box-sizing: border-box;
+         text-align: right;
+         padding-right: 1em;
+     }
+
+     #luk button {
+         font-size: 2em;
+         font-size: 30px;
+         color: white;
+         background-color: #363636;
+         border-radius: 100px;
+         padding-left: 13px;
+         padding-right: 13px;
+         margin-top: 20px;
+     }
+
 
 
 
