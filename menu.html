@@ -97,9 +97,9 @@
                 let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1v5ehfDEUuHsFVWsQRh1FwfVxRXM6dfNxQsveqqnSEec");
                 alleKategorier = await jsonData.json();
                 //sorteree efter navn
-                alleKategorier.sort((a, b) => {
-                    return a.navn.localeCompare(b.navn);
-                })
+//                alleKategorier.sort((a, b) => {
+//                    return a.navn.localeCompare(b.navn);
+//                })
                 visKategorier();
             }
 

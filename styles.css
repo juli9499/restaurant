@@ -51,7 +51,7 @@
  }
 
  h2 {
-     color: #5381aa;
+     color: #747474;
      text-align: center;
      font-size: 15px;
      font-family: 'Libre Baskerville', serif;
@@ -92,13 +92,16 @@
      background-color: #4B4B4B;
      color: white;
      margin: 5px;
-     padding-left: 20px;
-     padding-right: 20px;
+     text-decoration: none;
+     padding-left: 50px;
+     padding-right: 50px;
      border: none;
-     font-size: 1vw;
+     font-size: 13px;
      font-weight: 100;
 
  }
+
+ .menulinje a:hover {}
 
  /*------------- menu -------------*/
  .menu {
@@ -123,23 +126,17 @@
  }
 
  .menu .valgt {
-     /*     background-color: red;*/
-     /*     color: green;*/
      border-bottom: 2px solid green;
-     /*     color: red;*/
 
  }
 
  .kniv_gaffel {
      background-image: url(imgs/SVG/kniv-gaffel.svg);
-     /*     background-size: 100%;*/
      position: absolute;
      width: 1vw;
      height: 13.4vw;
      background-repeat: no-repeat;
      background-size: contain;
-     align-items: flex-end;
-     /*     display: inline;*/
  }
 
  /*--------------------------------------------- LOGOLINJE ----------------------------------*/
@@ -176,6 +173,7 @@
      background-size: 100%;
      width: 19vw;
      height: 8vw;
+     margin-top: 1vw;
      background-repeat: no-repeat;
      /*
      display: block;
@@ -245,8 +243,11 @@
  }
 
 
+ /*--------------------------------------------- Forside -------------------------*/
 
-
+ .line {
+     height: 10px;
+ }
 
  /*--------------------------------------------- Informationer -------------------------*/
 
@@ -254,18 +255,86 @@
 
  #informationer {
      display: flex;
+     flex-wrap: wrap;
      flex-direction: row;
-     font-family: 'Libre Baskerville', serif;
+     background-color: #ebe7da;
+
  }
 
 
 
  .left {
-     flex-basis: 300px;
+     flex-basis: 200px;
+     margin: 5vw;
      flex-grow: 1;
+     font-family: 'Libre Baskerville', serif;
+     font-size: 4vw;
+     font-weight: 900;
  }
 
  .right {
+     flex-basis: 400px;
+     margin: 5vw;
+     flex-grow: 2;
+     font-family: 'Libre Baskerville', serif;
+     font-weight: 900;
+ }
+
+ /*--------------------------------------------- Instagram -------------------------*/
+ #instagram {
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+     margin-top: 2vw;
+     margin-bottom: 2vw;
+ }
+
+ #instagram h2 {
+     text-align: left;
+     font-family: 'Libre Baskerville', serif;
+
+ }
+
+ #instagram img {
+     max-height: 13vw;
+ }
+
+
+
+ .left2 {
+     flex-basis: 200px;
+     flex-grow: 1;
+
+     margin: 1vw;
+     padding: 2vw;
+
+
+     font-family: 'Nunito Sans', sans-serif;
+     color: white;
+
+     background-color: #a0b59a;
+ }
+
+ .right2 {
      flex-basis: 300px;
      flex-grow: 1;
+     margin: 0.5vw;
+     padding: 0;
+     margin-bottom: 0;
+ }
+
+
+ .logo2 {
+     background-image: url(imgs/SVG/logo3.svg);
+     background-size: 100%;
+     width: 19vw;
+     height: 8vw;
+     margin-top: 1vw;
+     background-repeat: no-repeat;
+     /*
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+*/
+
  }
