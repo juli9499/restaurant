@@ -13,30 +13,6 @@
      margin: 0;
      font-family: 'Nunito Sans', sans-serif;
      font-weight: 100;
-
-
- }
-
- .kategorier {
-     /*     border: 1px solid #000000;*/
-     margin: 10px;
-     color: #000000;
-     background-color: white;
- }
-
- .border1 {
-     border: 10px double white;
-     margin: 50px;
-     padding-bottom: 20px;
-     background-color: #d9d9d9;
-     margin-left: 200px;
-     margin-right: 200px;
-     /*     background-color: #ebe7da;*/
- }
-
-
- .kategorier p {
-     padding: 5px;
  }
 
  #liste {
@@ -44,6 +20,29 @@
      grid-template-columns: 1fr 1fr 1fr 1fr;
      margin-left: 20px;
      margin-right: 20px;
+ }
+
+
+
+
+ .kategorier {
+     /*     border: 1px solid #000000;*/
+     margin: 10px;
+     color: #000000;
+     background-color: #f4f4f4;
+ }
+
+ .kategorier p {
+     padding: 5px;
+ }
+
+ .kategorier h2 {
+     background-color: #cecece;
+     color: black;
+     margin-top: 0;
+     margin-bottom: 0px;
+     padding-top: 10px;
+     padding-bottom: 10px;
  }
 
  .kategorier img {
@@ -54,6 +53,8 @@
      margin-right: auto;
  }
 
+
+
  .popup img {
      display: block;
      max-width: 400px;
@@ -61,14 +62,19 @@
      margin-right: auto;
  }
 
- h2 {
-     color: #747474;
-     text-align: center;
-     font-size: 15px;
-     font-family: 'Libre Baskerville', serif;
+
+
+ .border1 {
+     border: 6px double #a3a3a3;
+     margin: 50px;
+     padding-bottom: 20px;
+     background-color: white;
+     margin-left: 200px;
+     margin-right: 200px;
+     /*     background-color: #ebe7da;*/
  }
 
- h1 {
+ .border1 h1 {
      text-align: center;
      margin: 0;
      font-size: 20px;
@@ -76,10 +82,31 @@
      font-family: 'Libre Baskerville', serif;
  }
 
- .babushka_overskrift {
-     background-color: #ffffff;
-     padding-top: 50px;
-     padding-bottom: 50px;
+
+
+ .h21 {
+     text-align: center;
+     font-size: 11px;
+     font-family: 'Nunito Sans', sans-serif;
+     border: 1px solid #bcbcbc;
+     color: black;
+     margin-left: 450px;
+     margin-right: 450px;
+ }
+
+
+ .border1 h2 {
+     text-align: center;
+     font-size: 14px;
+     font-weight: 400;
+ }
+
+
+ h2 {
+     color: #747474;
+     text-align: center;
+     font-size: 15px;
+     font-family: 'Libre Baskerville', serif;
  }
 
  p {
@@ -128,8 +155,8 @@
      border: none;
      color: black;
      margin: 5px;
-     padding-left: 20px;
-     padding-right: 20px;
+     padding-left: 10px;
+     padding-right: 10px;
      padding-top: 5px;
      padding-bottom: 5px;
      font-weight: 100;
@@ -141,11 +168,14 @@
 
  }
 
+
+
  .kniv_gaffel {
      background-image: url(imgs/SVG/kniv-gaffel.svg);
      position: absolute;
-     width: 1vw;
-     height: 13.4vw;
+     width: 15px;
+     height: 134px;
+     left: 31vw;
      background-repeat: no-repeat;
      background-size: contain;
  }
