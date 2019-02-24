@@ -430,6 +430,139 @@
  /*---------------------MEDIA QUERIES-------------------------*/
 
 
+ @media only screen and (max-width: 1190px) {
+
+
+     .green {
+
+         flex-basis: 100px;
+         flex-grow: 1;
+
+     }
+
+     .white {
+
+         flex-basis: 300px;
+         flex-grow: 2;
+     }
+
+     .red {
+
+         flex-basis: 100px;
+         flex-grow: 1;
+     }
+
+
+     .menulinje a {
+         padding-left: 10px;
+         padding-right: 10px;
+         font-size: 10px;
+         font-weight: 100;
+
+     }
+
+
+
+
+     #takeaway .txt h2 {
+         margin-top: 120px;
+         margin-right: 50px;
+         font-size: 20px;
+         color: white;
+     }
+
+     #takeaway .justeat {
+         width: 100px;
+         height: 220px;
+         flex-basis: 100px;
+         flex-grow: 1;
+         margin-left: 50px;
+         margin-top: 50px;
+         margin-bottom: 50px;
+     }
+
+     .kniv_gaffel {
+         left: 10vw;
+     }
+
+
+     .kategorier {
+         margin: 3px;
+         color: #000000;
+         background-color: #f4f4f4;
+     }
+
+     .kategorier p {
+         padding: 5px;
+     }
+
+     .kategorier h2 {
+         background-color: #cecece;
+         color: black;
+         margin-top: 0;
+         margin-bottom: 0px;
+         padding-top: 10px;
+         padding-bottom: 10px;
+     }
+
+     .kategorier img {
+         display: block;
+         max-width: 100%;
+         max-height: 230px;
+     }
+
+     #liste {
+         grid-template-columns: 1fr 1fr;
+         margin-left: 20px;
+         margin-right: 20px;
+     }
+
+     .h21 {
+         margin-left: 250px;
+         margin-right: 250px;
+     }
+
+     #popup {
+         width: 500px;
+         height: auto;
+         padding-bottom: 30px;
+         top: 250px;
+         left: 130px;
+         position: fixed;
+         background-color: white;
+     }
+
+     #indhold {
+         box-sizing: border-box;
+         background-color: white;
+         width: 400px;
+         /*        padding: 10px;*/
+         height: auto;
+         margin: auto;
+         padding:
+     }
+
+     #luk {
+         box-sizing: border-box;
+         text-align: right;
+         padding-right: 1em;
+     }
+
+     #luk button {
+         font-size: 2em;
+         font-size: 30px;
+         color: white;
+         background-color: #363636;
+         border-radius: 100px;
+         padding-left: 13px;
+         padding-right: 13px;
+         margin-top: 20px;
+     }
+
+
+ }
+
+
 
  @media only screen and (max-width:900px) {
 
@@ -560,6 +693,164 @@
          margin-top: 20px;
      }
 
+
+ }
+
+
+
+
+ @media only screen and (max-width: 760px) {
+
+
+     .green {
+
+         flex-basis: 100px;
+         flex-grow: 1;
+
+     }
+
+     .white {
+
+         flex-basis: 500px;
+         flex-grow: 3;
+
+     }
+
+     .red {
+
+         flex-basis: 100px;
+         flex-grow: 1;
+     }
+
+
+     .menulinje a {
+         padding-left: 10px;
+         padding-right: 10px;
+         font-size: 10px;
+         font-weight: 100;
+
+     }
+
+
+     #takeaway .txt h2 {
+         margin: 50px;
+         margin-top: 0;
+         font-size: 25px;
+         color: white;
+         text-align: left;
+
+     }
+
+     #takeaway .justeat {
+         width: 50px;
+         height: 220px;
+         background-size: 150px;
+         flex-basis: 100px;
+         flex-grow: 1;
+         margin-left: 120px;
+         margin-top: 50px;
+         margin-bottom: 0;
+     }
+
+     .kniv_gaffel {
+         left: 3vw;
+     }
+
+
+     .kategorier {
+         margin: 3px;
+     }
+
+     .kategorier p {
+         padding: 5px;
+     }
+
+     .kategorier h2 {
+         background-color: #cecece;
+         color: black;
+         margin-top: 0;
+         margin-bottom: 0px;
+         padding-top: 10px;
+         padding-bottom: 10px;
+     }
+
+     .kategorier img {
+         display: block;
+         max-width: 100%;
+         max-height: 230px;
+     }
+
+     #liste {
+         grid-template-columns: 1fr;
+         margin-left: 5px;
+         margin-right: 5px;
+     }
+
+     .h21 {
+         margin-left: 250px;
+         margin-right: 250px;
+
+     }
+
+
+
+     #popup {
+         width: 355px;
+         height: auto;
+         padding-bottom: 30px;
+         top: 250px;
+         left: 30px;
+         position: fixed;
+         background-color: white;
+     }
+
+     #popup img {
+         max-width: 260px;
+     }
+
+     #indhold {
+         box-sizing: border-box;
+         background-color: white;
+         width: 270px;
+         /*        padding: 10px;*/
+         height: auto;
+         margin: auto;
+     }
+
+     #luk {
+         box-sizing: border-box;
+         text-align: right;
+         padding-right: 20px;
+     }
+
+     #luk button {
+         font-size: 2em;
+         font-size: 30px;
+         color: white;
+         background-color: #363636;
+         border-radius: 100px;
+         padding-left: 13px;
+         padding-right: 13px;
+         margin-top: 20px;
+     }
+
+
+
+     .border1 {
+         border: 6px double #a3a3a3;
+         margin: 0px;
+         padding-bottom: 20px;
+         background-color: white;
+         margin-left: 50px;
+         /*     margin-left: 200px;*/
+         margin-right: 50px;
+         /*     margin-right: 200px;*/
+         /*     background-color: #ebe7da;*/
+     }
+
+     b {
+         padding-left: 200px;
+     }
 
 
 
