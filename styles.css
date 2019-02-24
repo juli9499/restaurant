@@ -143,7 +143,9 @@
 
  }
 
- .menulinje a:hover {}
+ .menulinje a:hover {
+     color: aquamarine;
+ }
 
  /*------------- menu -------------*/
  .menu {
@@ -157,7 +159,7 @@
 
 
  .menu button {
-     background-color: none;
+     background-color: white;
      border: none;
      color: black;
      margin: 5px;
@@ -227,20 +229,9 @@
      height: 120px;
      margin-top: 1vw;
      background-repeat: no-repeat;
-     /*
-     display: block;
-     margin-left: auto;
-     margin-right: auto;
-*/
 
  }
 
- .underoverskrift {
-     text-align: center;
-     font-size: 13px;
-     position: absolute;
-
- }
 
 
  /*--------------------------------------------- POPUP -----------------------------------*/
@@ -322,7 +313,6 @@
      margin: 5vw;
      flex-grow: 1;
      font-family: 'Libre Baskerville', serif;
-     font-size: 4vw;
      font-weight: 900;
  }
 
@@ -425,5 +415,115 @@
      margin-left: auto;
      margin-right: auto;
 */
+
+ }
+
+
+
+
+
+
+
+
+
+
+ /*---------------------MEDIA QUERIES-------------------------*/
+
+
+
+ @media only screen and (max-width:900px) {
+
+
+     .green {
+
+         flex-basis: 100px;
+         flex-grow: 1;
+
+     }
+
+     .white {
+
+         flex-basis: 300px;
+         flex-grow: 2;
+     }
+
+     .red {
+
+         flex-basis: 100px;
+         flex-grow: 1;
+     }
+
+
+     .menulinje a {
+         padding-left: 10px;
+         padding-right: 10px;
+         font-size: 10px;
+         font-weight: 100;
+
+     }
+
+
+
+
+     #takeaway .txt h2 {
+         margin-top: 120px;
+         margin-right: 50px;
+         font-size: 20px;
+         color: white;
+     }
+
+     #takeaway .justeat {
+         width: 100px;
+         height: 220px;
+         flex-basis: 100px;
+         flex-grow: 1;
+         margin-left: 50px;
+         margin-top: 50px;
+         margin-bottom: 50px;
+     }
+
+     .kniv_gaffel {
+         left: 10vw;
+     }
+
+
+     .kategorier {
+         margin: 3px;
+         color: #000000;
+         background-color: #f4f4f4;
+     }
+
+     .kategorier p {
+         padding: 5px;
+     }
+
+     .kategorier h2 {
+         background-color: #cecece;
+         color: black;
+         margin-top: 0;
+         margin-bottom: 0px;
+         padding-top: 10px;
+         padding-bottom: 10px;
+     }
+
+     .kategorier img {
+         display: block;
+         max-width: 100%;
+         max-height: 230px;
+     }
+
+     #liste {
+         grid-template-columns: 1fr 1fr;
+         margin-left: 20px;
+         margin-right: 20px;
+     }
+
+     .h21 {
+         margin-left: 250px;
+         margin-right: 250px;
+     }
+
+
+
 
  }
