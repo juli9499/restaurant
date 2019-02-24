@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taste of Italy</title>
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Nunito+Sans:300,400,700,900" rel="stylesheet">
-   <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 
 
 
@@ -39,24 +39,23 @@
     <header>
 
         <nav class="menulinje">
-           <a href="forside.html">FORSIDE</a>
-           <a href="menu.html">MENU</a>
-           <a href="forside.html#informationer">INFORMATION</a>
-           <a href="takeaway.html">TAKEAWAY</a>
+            <a href="forside.html">FORSIDE</a>
+            <a href="menu.html">MENU</a>
+            <a href="forside.html#informationer">INFORMATION</a>
+            <a href="takeaway.html">TAKEAWAY</a>
         </nav>
 
         <div class="logolinje">
             <div class="firkant green"></div>
             <div class="firkant white">
                 <div class="logo"></div>
-<!--                <p class="underoverskrift">Frisk Pizza og Pasta</p>-->
             </div>
             <div class="firkant red"></div>
         </div>
 
         <nav class="menu">
 
-                <div class="kniv_gaffel"></div>
+            <div class="kniv_gaffel"></div>
             <button class="filter valgt" data-hold="alle">ALLE</button>
             <button class="filter" data-hold="forretter">FORRET</button>
             <button class="filter" data-hold="hovedretter">HOVEDRET</button>
@@ -65,10 +64,13 @@
         </nav>
 
     </header>
-    <h2>Forside</h2>
+
+    <div class="border1">
+        <h2>ALLE</h2>
 
 
-    <section id=liste></section>
+        <section id=liste></section>
+    </div>
 
     <footer>
 
@@ -97,9 +99,9 @@
                 let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1v5ehfDEUuHsFVWsQRh1FwfVxRXM6dfNxQsveqqnSEec");
                 alleKategorier = await jsonData.json();
                 //sorteree efter navn
-//                alleKategorier.sort((a, b) => {
-//                    return a.navn.localeCompare(b.navn);
-//                })
+                //                alleKategorier.sort((a, b) => {
+                //                    return a.navn.localeCompare(b.navn);
+                //                })
                 visKategorier();
             }
 
@@ -150,7 +152,7 @@
                 filter = this.getAttribute("data-hold");
                 document.querySelector("h2").textContent = this.textContent;
                 document.querySelectorAll(".filter").forEach(elm => {
-                    console.log("classList",elm.classList);
+                    console.log("classList", elm.classList);
                     elm.classList.remove("valgt");
                 })
                 this.classList.add("valgt");
@@ -160,6 +162,7 @@
             }
             getJson();
         }
+
     </script>
 </body>
 

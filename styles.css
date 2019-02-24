@@ -18,11 +18,22 @@
  }
 
  .kategorier {
-     border: 1px solid #000000;
+     /*     border: 1px solid #000000;*/
      margin: 10px;
      color: #000000;
      background-color: white;
  }
+
+ .border1 {
+     border: 10px double white;
+     margin: 50px;
+     padding-bottom: 20px;
+     background-color: #d9d9d9;
+     margin-left: 200px;
+     margin-right: 200px;
+     /*     background-color: #ebe7da;*/
+ }
+
 
  .kategorier p {
      padding: 5px;
@@ -31,8 +42,8 @@
  #liste {
      display: grid;
      grid-template-columns: 1fr 1fr 1fr 1fr;
-     margin-left: 200px;
-     margin-right: 200px;
+     margin-left: 20px;
+     margin-right: 20px;
  }
 
  .kategorier img {
@@ -139,6 +150,7 @@
      background-size: contain;
  }
 
+
  /*--------------------------------------------- LOGOLINJE ----------------------------------*/
 
  .logolinje {
@@ -169,10 +181,10 @@
  }
 
  .logo {
-     background-image: url(imgs/SVG/logo.svg);
+     background-image: url(imgs/SVG/logo5.svg);
      background-size: 100%;
-     width: 19vw;
-     height: 8vw;
+     width: 250px;
+     height: 120px;
      margin-top: 1vw;
      background-repeat: no-repeat;
      /*
@@ -186,6 +198,8 @@
  .underoverskrift {
      text-align: center;
      font-size: 13px;
+     position: absolute;
+
  }
 
 
@@ -307,16 +321,18 @@
 
      margin: 1vw;
      padding: 2vw;
+     padding-right: 10vw;
 
 
      font-family: 'Nunito Sans', sans-serif;
-     color: white;
+     color: black;
 
-     background-color: #a0b59a;
+
+     /*     background-color: #a0b59a;*/
  }
 
  .right2 {
-     flex-basis: 300px;
+     flex-basis: 200px;
      flex-grow: 1;
      margin: 0.5vw;
      padding: 0;
@@ -325,11 +341,12 @@
 
 
  .logo2 {
-     background-image: url(imgs/SVG/logo3.svg);
+     background-image: url(imgs/SVG/logo.svg);
      background-size: 100%;
-     width: 19vw;
-     height: 8vw;
+     width: 12vw;
+     height: 6vw;
      margin-top: 1vw;
+     margin-left: 220px;
      background-repeat: no-repeat;
      /*
      display: block;
