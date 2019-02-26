@@ -30,10 +30,12 @@
      margin: 10px;
      color: #000000;
      background-color: #f4f4f4;
+     cursor: pointer;
  }
 
  .kategorier p {
      padding: 5px;
+     margin-bottom: 10px;
  }
 
  .kategorier h2 {
@@ -55,17 +57,10 @@
 
 
 
- .popup img {
-     display: block;
-     max-width: 400px;
-     margin-left: auto;
-     margin-right: auto;
- }
-
 
 
  .border1 {
-     border: 6px double #a3a3a3;
+     border: 6px double #cecece;
      margin: 50px;
      padding-bottom: 20px;
      background-color: white;
@@ -144,8 +139,10 @@
  }
 
  .menulinje a:hover {
-     color: aquamarine;
+     color: white;
+     text-shadow: 1px 1px 10px white;
  }
+
 
  /*------------- menu -------------*/
  .menu {
@@ -206,7 +203,7 @@
 
  .green {
      /*     background-color: #a0b59a;*/
-     background-color: #568d56;
+     /*     background-color: #568d56;*/
      background-color: #ebe7da;
  }
 
@@ -218,7 +215,7 @@
 
  .red {
      /*     background-color: #cb9797;*/
-     background-color: #ce5151;
+     /*     background-color: #ce5151;*/
      background-color: #ebe7da;
  }
 
@@ -238,24 +235,41 @@
 
  #popup {
      display: none;
-     border: 1px solid black;
+     /*     border: 1px solid black;*/
      width: 500px;
      height: auto;
      padding-bottom: 30px;
-     top: 100px;
+     top: 250px;
      left: 470px;
      position: fixed;
-     background-color: white;
+     background-color: #ebe7da;
+ }
+
+ #popup h2 {
+     background-color: #ffffff;
+     color: black;
+     margin-top: 0;
+     margin-bottom: 0px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+ }
+
+
+ .popup img {
+     display: block;
+     max-width: 400px;
+     margin-left: auto;
+     margin-right: auto;
  }
 
  #indhold {
      box-sizing: border-box;
-     background-color: white;
+     background-color: #ebe7da;
      width: 400px;
      /*        padding: 10px;*/
      height: auto;
      margin: auto;
-     padding:
+
  }
 
  #luk {
@@ -268,7 +282,7 @@
      font-size: 2em;
      font-size: 30px;
      color: white;
-     background-color: #363636;
+     background-color: #959595;
      border-radius: 100px;
      padding-left: 13px;
      padding-right: 13px;
@@ -427,6 +441,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
  /*---------------------MEDIA QUERIES-------------------------*/
 
 
@@ -482,12 +505,12 @@
      }
 
      .kniv_gaffel {
-         left: 10vw;
+         left: 23vw;
      }
 
 
      .kategorier {
-         margin: 3px;
+         margin: 10px;
          color: #000000;
          background-color: #f4f4f4;
      }
@@ -508,7 +531,7 @@
      .kategorier img {
          display: block;
          max-width: 100%;
-         max-height: 230px;
+         max-height: 290px;
      }
 
      #liste {
@@ -518,23 +541,29 @@
      }
 
      .h21 {
-         margin-left: 250px;
-         margin-right: 250px;
+         margin-left: 380px;
+         margin-right: 380px;
      }
 
      #popup {
          width: 500px;
          height: auto;
          padding-bottom: 30px;
-         top: 250px;
-         left: 130px;
+         top: 350px;
+         left: 260px;
          position: fixed;
-         background-color: white;
+     }
+
+     #popup h2 {
+         font-size: 25px;
+     }
+
+     #popup p {
+         font-size: 25px;
      }
 
      #indhold {
          box-sizing: border-box;
-         background-color: white;
          width: 400px;
          /*        padding: 10px;*/
          height: auto;
@@ -552,12 +581,17 @@
          font-size: 2em;
          font-size: 30px;
          color: white;
-         background-color: #363636;
          border-radius: 100px;
          padding-left: 13px;
          padding-right: 13px;
          margin-top: 20px;
      }
+
+     b {
+         padding-left: 290px;
+     }
+
+
 
 
  }
@@ -616,7 +650,7 @@
      }
 
      .kniv_gaffel {
-         left: 10vw;
+         left: 17vw;
      }
 
 
@@ -663,12 +697,10 @@
          top: 250px;
          left: 130px;
          position: fixed;
-         background-color: white;
      }
 
      #indhold {
          box-sizing: border-box;
-         background-color: white;
          width: 400px;
          /*        padding: 10px;*/
          height: auto;
@@ -686,12 +718,16 @@
          font-size: 2em;
          font-size: 30px;
          color: white;
-         background-color: #363636;
          border-radius: 100px;
          padding-left: 13px;
          padding-right: 13px;
          margin-top: 20px;
      }
+
+     b {
+         padding-left: 320px;
+     }
+
 
 
  }
@@ -699,7 +735,7 @@
 
 
 
- @media only screen and (max-width: 760px) {
+ @media only screen and (max-width: 770px) {
 
 
      .green {
@@ -726,6 +762,179 @@
      .menulinje a {
          padding-left: 10px;
          padding-right: 10px;
+         font-size: 15px;
+         font-weight: 100;
+
+     }
+
+
+     #takeaway .txt h2 {
+         margin: 50px;
+         margin-top: 0;
+         font-size: 25px;
+         color: white;
+         text-align: left;
+
+     }
+
+     #takeaway .justeat {
+         width: 50px;
+         height: 220px;
+         background-size: 150px;
+         flex-basis: 100px;
+         flex-grow: 1;
+         margin-left: 120px;
+         margin-top: 50px;
+         margin-bottom: 0;
+     }
+
+     .kniv_gaffel {
+         left: 20vw;
+     }
+
+
+     .kategorier {
+         margin: 3px;
+     }
+
+     .kategorier p {
+         padding: 5px;
+     }
+
+     .kategorier h2 {
+         background-color: #cecece;
+         color: black;
+         margin-top: 0;
+         margin-bottom: 0px;
+         padding-top: 10px;
+         padding-bottom: 10px;
+     }
+
+     .kategorier img {
+         display: block;
+         max-width: 100%;
+         max-height: 230px;
+     }
+
+     #liste {
+         grid-template-columns: 1fr 1fr;
+         margin-left: 5px;
+         margin-right: 5px;
+     }
+
+     .h21 {
+         margin-left: 200px;
+         margin-right: 200px;
+
+     }
+
+
+
+     #popup {
+         width: 300px;
+         height: auto;
+         padding-bottom: 30px;
+         top: 250px;
+         left: 230px;
+         position: fixed;
+     }
+
+     #popup img {
+         max-width: 260px;
+     }
+
+     #popup h2 {
+         font-size: 15px;
+     }
+
+     #popup p {
+         font-size: 15px;
+     }
+
+     #indhold {
+         box-sizing: border-box;
+         width: 270px;
+         /*        padding: 10px;*/
+         height: auto;
+         margin: auto;
+     }
+
+     #luk {
+         box-sizing: border-box;
+         text-align: right;
+         padding-right: 20px;
+     }
+
+     #luk button {
+         font-size: 2em;
+         font-size: 30px;
+         color: white;
+         border-radius: 100px;
+         padding-left: 13px;
+         padding-right: 13px;
+         margin-top: 20px;
+         margin-bottom: 10px;
+     }
+
+
+
+     .border1 {
+         margin: 0px;
+         padding-bottom: 20px;
+         background-color: white;
+         margin-left: 50px;
+         /*     margin-left: 200px;*/
+         margin-right: 50px;
+         /*     margin-right: 200px;*/
+         /*     background-color: #ebe7da;*/
+     }
+
+     b {
+         padding-left: 200px;
+     }
+
+     .menu button {
+         margin: 5px;
+         padding-left: 1px;
+         padding-right: 1px;
+         padding-top: 5px;
+         padding-bottom: 5px;
+         font-weight: 100;
+         font-size: 15px;
+     }
+
+
+
+ }
+
+
+ @media only screen and (max-width: 400px) {
+
+
+     .green {
+
+         flex-basis: 100px;
+         flex-grow: 1;
+
+     }
+
+     .white {
+
+         flex-basis: 500px;
+         flex-grow: 3;
+
+     }
+
+     .red {
+
+         flex-basis: 100px;
+         flex-grow: 1;
+     }
+
+
+     .menulinje a {
+         padding-left: 2px;
+         padding-right: 2px;
          font-size: 10px;
          font-weight: 100;
 
@@ -754,6 +963,7 @@
 
      .kniv_gaffel {
          left: 3vw;
+         display: none;
      }
 
 
@@ -787,30 +997,36 @@
      }
 
      .h21 {
-         margin-left: 250px;
-         margin-right: 250px;
+         margin-left: 80px;
+         margin-right: 80px;
 
      }
 
 
 
      #popup {
-         width: 355px;
+         width: 290px;
          height: auto;
          padding-bottom: 30px;
-         top: 250px;
-         left: 30px;
+         top: 150px;
+         left: 15px;
          position: fixed;
-         background-color: white;
      }
 
      #popup img {
          max-width: 260px;
      }
 
+     #popup h2 {
+         font-size: 15px;
+     }
+
+     #popup p {
+         font-size: 15px;
+     }
+
      #indhold {
          box-sizing: border-box;
-         background-color: white;
          width: 270px;
          /*        padding: 10px;*/
          height: auto;
@@ -827,23 +1043,22 @@
          font-size: 2em;
          font-size: 30px;
          color: white;
-         background-color: #363636;
          border-radius: 100px;
          padding-left: 13px;
          padding-right: 13px;
          margin-top: 20px;
+         margin-bottom: 10px;
      }
 
 
 
      .border1 {
-         border: 6px double #a3a3a3;
          margin: 0px;
          padding-bottom: 20px;
          background-color: white;
-         margin-left: 50px;
+         margin-left: 10px;
          /*     margin-left: 200px;*/
-         margin-right: 50px;
+         margin-right: 10px;
          /*     margin-right: 200px;*/
          /*     background-color: #ebe7da;*/
      }
@@ -852,6 +1067,54 @@
          padding-left: 200px;
      }
 
+     .menu button {
+         margin: 5px;
+         padding-left: 0px;
+         padding-right: 0px;
+         padding-top: 5px;
+         padding-bottom: 5px;
+         font-weight: 100;
+         font-size: 10px;
+     }
+
 
 
  }
+
+
+
+ /* knap * /
+
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    border: none;
+    right: 30px;
+    z-index: 2;
+    background-image: url(pictures/arrow3.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70px;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+
+}
+
+#myBtn:hover {
+    background-image: url(pictures/arrow4.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-size: 70px;
+    transform: scale(1.1);
+    opacity: 0.5;
+
+    width: 50px;
+    height: 50px;
+}

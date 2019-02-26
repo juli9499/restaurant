@@ -29,6 +29,8 @@
 
 
 <body>
+
+
     <div id="popup">
         <div id="luk"><button>X</button></div>
         <div id="indhold"></div>
@@ -112,8 +114,7 @@
                             <article class="kategorier">
                             <h2>${kategorier.navn}</h2>
                             <img src="imgs/${kategorier.billede}.jpg" alt="${kategorier.navn}">
-                                <br>
-                            <p>${kategorier.kort}</p><br>
+                                <br><br>
                             <p><b>Pris: ${kategorier.pris},-</b></p>
                         </article>
                         `;
@@ -161,6 +162,7 @@
             }
             getJson();
         }
+
     </script>
 </body>
 
